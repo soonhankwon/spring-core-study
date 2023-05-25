@@ -2,6 +2,7 @@ package com.soon.springcorestudy.config;
 
 import com.soon.springcorestudy.discount.DiscountPolicy;
 import com.soon.springcorestudy.discount.FixDiscountPolicy;
+import com.soon.springcorestudy.discount.RateDiscountPolicy;
 import com.soon.springcorestudy.member.MemberService;
 import com.soon.springcorestudy.member.MemberServiceImpl;
 import com.soon.springcorestudy.member.MemoryMemberRepository;
@@ -22,7 +23,8 @@ public class AppConfig {
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
+    // OCP
     public DiscountPolicy discountPolicy() {
-        return new FixDiscountPolicy();
+        return new RateDiscountPolicy();
     }
 }
