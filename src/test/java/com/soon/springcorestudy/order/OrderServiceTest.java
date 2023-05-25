@@ -4,12 +4,11 @@ import com.soon.springcorestudy.config.AppConfig;
 import com.soon.springcorestudy.member.Grade;
 import com.soon.springcorestudy.member.Member;
 import com.soon.springcorestudy.member.MemberService;
-import com.soon.springcorestudy.member.MemberServiceImpl;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-public class OrderServiceTest {
+class OrderServiceTest {
 
     MemberService memberService;
     OrderService orderService;

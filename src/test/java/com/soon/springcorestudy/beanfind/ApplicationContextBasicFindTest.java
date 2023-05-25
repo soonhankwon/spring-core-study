@@ -3,7 +3,6 @@ package com.soon.springcorestudy.beanfind;
 import com.soon.springcorestudy.config.AppConfig;
 import com.soon.springcorestudy.member.MemberService;
 import com.soon.springcorestudy.member.MemberServiceImpl;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
