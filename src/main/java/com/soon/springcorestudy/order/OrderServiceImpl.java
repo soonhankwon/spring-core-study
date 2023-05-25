@@ -3,12 +3,16 @@ package com.soon.springcorestudy.order;
 import com.soon.springcorestudy.discount.DiscountPolicy;
 import com.soon.springcorestudy.member.Member;
 import com.soon.springcorestudy.member.MemberRepository;
-import com.soon.springcorestudy.member.MemoryMemberRepository;
 
 public class OrderServiceImpl implements OrderService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private DiscountPolicy discountPolicy;
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {

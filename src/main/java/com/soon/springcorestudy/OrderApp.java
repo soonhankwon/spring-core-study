@@ -1,18 +1,18 @@
 package com.soon.springcorestudy;
 
+import com.soon.springcorestudy.config.AppConfig;
 import com.soon.springcorestudy.member.Grade;
 import com.soon.springcorestudy.member.Member;
 import com.soon.springcorestudy.member.MemberService;
-import com.soon.springcorestudy.member.MemberServiceImpl;
 import com.soon.springcorestudy.order.Order;
 import com.soon.springcorestudy.order.OrderService;
-import com.soon.springcorestudy.order.OrderServiceImpl;
 
 public class OrderApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
-        OrderService orderService = new OrderServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+        OrderService orderService = appConfig.orderService();
 
         Long memberId = 1L;
         Member member = new Member(memberId, "memberA", Grade.VIP);

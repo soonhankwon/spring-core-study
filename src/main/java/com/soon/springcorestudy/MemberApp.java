@@ -1,14 +1,16 @@
 package com.soon.springcorestudy;
 
+import com.soon.springcorestudy.config.AppConfig;
 import com.soon.springcorestudy.member.Grade;
 import com.soon.springcorestudy.member.Member;
 import com.soon.springcorestudy.member.MemberService;
-import com.soon.springcorestudy.member.MemberServiceImpl;
 
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+
         Member member = new Member(1L, "memberA", Grade.VIP);
         memberService.join(member);
 
