@@ -3,7 +3,6 @@ package com.soon.springcorestudy.order;
 import com.soon.springcorestudy.discount.DiscountPolicy;
 import com.soon.springcorestudy.member.Member;
 import com.soon.springcorestudy.member.MemberRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -13,8 +12,6 @@ public class OrderServiceImpl implements OrderService {
     private final DiscountPolicy discountPolicy;
 
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
-        System.out.println("memberRepository = " + memberRepository);
-        System.out.println("discountPolicy = " + discountPolicy);
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
